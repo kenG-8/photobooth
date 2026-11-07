@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cream: #fdf6f0;
+    --pink: #ffd6e0;
+    --yellow: #fff3cd;
+    --lavender: #e8d5f5;
+    --matcha: #d4edda;
+  }
+  
+  html, body {
+    min-height: 100dvh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #fdf6f0; }
+  ::-webkit-scrollbar-thumb { background: #ffd6e0; border-radius: 3px; }
+}
+
+@layer utilities {
+  .min-h-dvh { min-height: 100dvh; }
+  .h-dvh { height: 100dvh; }
+  
+  /* Pastel shadow */
+  .shadow-pastel {
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.25);
+  }
+  .shadow-pastel-lg {
+    box-shadow: 0 8px 40px rgba(255, 182, 193, 0.35);
+  }
+  
+  /* Cute border */
+  .border-cute {
+    border: 2px solid rgba(255, 214, 224, 0.6);
+  }
+}
+
+/* Flash animation */
+@keyframes flash {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.camera-flash {
+  animation: flash 0.4s ease-out forwards;
+}
+
+/* Spin animation for music disc */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+/* Countdown pulse */
+@keyframes countdown-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.countdown-pulse {
+  animation: countdown-pulse 0.5s ease-in-out;
+}
+
+/* Shimmer for stickers */
+@keyframes shimmer {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(5deg); }
+  75% { transform: scale(0.95) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+.sticker-hover:hover {
+  animation: shimmer 0.4s ease-in-out;
+}
+
+/* Slide in from bottom */
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slide-up {
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Bounce in */
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.bounce-in {
+  animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}

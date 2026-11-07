@@ -1,0 +1,6 @@
+# Cloudflare Pages build config
+# In Cloudflare Pages dashboard:
+#   Build command: npm run build
+#   Build output directory: dist
+#   Node.js version: 20
+
